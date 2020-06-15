@@ -1,0 +1,3082 @@
+{
+	"info": {
+		"_postman_id": "a0f62821-70c6-4bb1-93f4-aa71ea6a8558",
+		"name": "Inventaris",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nama\": \"Toriq Ahmad Salam\",\n\t\"username\": \"toriqahmads\",\n\t\"password\": \"Kbps1234\",\n\t\"role\": -1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:{{port}}/auth/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"auth",
+								"register"
+							]
+						},
+						"description": "role can filled with 1 or -1. Default value is 1.\n1 = basic user\n-1 = admin user"
+					},
+					"response": [
+						{
+							"name": "Register Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"nama\": \"Toriq Ahmad Salam\",\n\t\"username\": \"toriqahmads\",\n\t\"password\": \"Kbps1234\",\n\t\"role\": -1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}:{{port}}/auth/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "693"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b5-GWflMlZNoc56zkdCsHhnP0QaqRM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 07 Jun 2020 03:44:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"token\": \"NDM4NjEzMDkzYjgwMTdkMmI5ZTUzZjA1OGJlMDMyMjM1ODg2Y2I2MDU0NzE3ZGI1MDhlM2Y4NTRhMzNmYjA3ZGQyZTNiOWYwNzlmMGQ3MmEzNzhkZDdiMGUzZTgyYzIzMzg4OTE5YjM3OGE1N2QzNjkwNTAyMTA0NGNjM2NhNWZmZGQ1NTg2ZjdhZmI2MzNjOGI5MGQ0ZjdiNTFjYTc1YWI2NTY4YzJlOTJjZGFhYjMyNDg5ZTZhMTNhZjRhMTJlYmYyOTA5NmU5MjUxYjFiOTBmM2Y2OGM4MjA3N2Q3NTllOTA3MTU0NTVlZDkzNDBmNWNlM2Y2MDg0ZmZkZjcwZmM4NjVkYjA3ZDVkMDE4NTdiNmRlNGVlMjhmYzdhOTE0ZTdiMDEzYWYxMDNhMWVkZmZiNDAyNGQ1Y2JkMjE0ZjNmYzgxMWI0OTk1MzY5MWI0ZTg1MDIyMjlmOWJlMjIxOWQwNTkzNDdlMjFkNmI1ZmY4YWUyNzQ2MmNkMjRlOWE0MDcwNzE1YWZiOGFjMGY5MTZhODY3M2Q1YTUyNmQwMGRkNWY1YjNmNGY5Y2E0YmU5ZTk3ZmE3ZDIyZjMxMDZiMQ==\",\n    \"data\": {\n        \"username\": \"toriqahmads\",\n        \"nama\": \"Toriq Ahmad\",\n        \"id\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"toriqahmads\",\n\t\"password\": \"Kbps1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:{{port}}/auth/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"toriqahmads\",\n\t\"password\": \"Kbps1234\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}:{{port}}/auth/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "702"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2be-ycTEd3QY+e6uR56lTqZJyTBboF4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 07 Jun 2020 03:45:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"token\": \"NTkzMzZlZWQxNzkyNjM4YzEwZDcxZTg2MzU1YmYyZGRmY2RhYTE5ZmQ2MDJiNDc0OWFhMTUzZDUwZmM5YTFkYzdjNWUwNWI0ZTcxMDBlNjRiMjM4ODhkZWE5YTdiMTgzOGIyNzliZmE0MzU3ODFhZmQ3ZjQzN2I4MTgwZGRmMzNhMjM4ODBkYzcyNjNkYzQyMDQxNjE0YzFmN2Q2YWJjNTFiN2MwNzQ0ZDNhNjhkN2QwOWJlZjEyYWI1MzNhODZlZDU0MzQ2NTJjMTk0YzU1ZmQ1YzE5MDZkNTVmN2NlODAyNjI5ZmEyOTg2ZjM1OTRlZTU5MTA1MjJmZWIyOTFjNWI5OTE3ZGZiYTUyYTA0ODgxN2M0YTAzNGJhMTAyYzJmZjRiMDA5Y2FmY2FjMTU0NDJmOTlkYTlmMGZhZDVhZWJlYWU4MTAwNzFhNDE0ODQ1M2NmMjMyMjExNjY0MTU1NDNjNzc4MTg1ZDA1YTg3MjEyZDAxZWE5Y2MyYTY4NGE3OTc0MDUyNzVjYTUxM2Y2ZjJiMmFhYmNjZmMwNmIyYWRkNmJjNjQxMmJjNzAzMGFmNzMzNDU5ODg2YWRhNDZjNA==\",\n    \"data\": {\n        \"username\": \"toriqahmads\",\n        \"nama\": \"Toriq Ahmad\",\n        \"id\": 1,\n        \"role\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Check Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}:{{port}}/auth/token",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"auth",
+								"token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Check Token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}:{{port}}/auth/token",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"auth",
+										"token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "20"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14-Y53wuE/mmbSikKcT/WualL1N65U\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 05 Jun 2020 18:43:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\"\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Barang",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nama_barang\": \"Mie Goreng Indomie\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:{{port}}/barang",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"barang"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"nama_barang\": \"Mie Goreng Indomie\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}:{{port}}/barang",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"barang"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "171"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ab-mEfWht+j0/e3E+QGJkWagIuXE1s\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jun 2020 18:54:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"kode_barang\": \"IYMJS\",\n        \"id\": 1,\n        \"nama_barang\": \"Mie Goreng Indomie\",\n        \"updatedAt\": \"2020-06-02T18:54:10.932Z\",\n        \"createdAt\": \"2020-06-02T18:54:10.932Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nama_barang\": \"Mie Goreng Indomie Spesial\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:{{port}}/barang/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"barang",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"nama_barang\": \"Mie Goreng Indomie Spesial\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}:{{port}}/barang/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"barang",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "179"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b3-nVwZCUcC35CMLYdtEGlSBsCI/Cg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jun 2020 18:54:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"nama_barang\": \"Mie Goreng Indomie Spesial\",\n        \"kode_barang\": \"IYMJS\",\n        \"createdAt\": \"2020-06-02T18:54:10.000Z\",\n        \"updatedAt\": \"2020-06-02T18:54:57.253Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:{{port}}/barang/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"barang",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get By ID Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}:{{port}}/barang/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"barang",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "202"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ca-yQqD7qsbL+o2oFOWvsX4SEpg02w\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jun 2020 19:07:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"nama_barang\": \"Mie Goreng Indomie Spesial\",\n        \"kode_barang\": \"IYMJS\",\n        \"createdAt\": \"2020-06-02T18:54:10.000Z\",\n        \"updatedAt\": \"2020-06-02T18:54:57.000Z\",\n        \"inventaris_gudang\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}:{{port}}/barang?kode_barang=N&nama_barang=mie&user_id=1&page=1&per_page=25",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"barang"
+							],
+							"query": [
+								{
+									"key": "kode_barang",
+									"value": "N"
+								},
+								{
+									"key": "nama_barang",
+									"value": "mie"
+								},
+								{
+									"key": "user_id",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}:{{port}}/barang?kode_barang=N&nama_barang=mie&user_id=1&page=1&per_page=25",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"barang"
+									],
+									"query": [
+										{
+											"key": "kode_barang",
+											"value": "N"
+										},
+										{
+											"key": "nama_barang",
+											"value": "mie"
+										},
+										{
+											"key": "user_id",
+											"value": "1"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "25"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "313"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"139-cDVlezASOWb0Ve44kJVmkTRmYuU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 07 Jun 2020 04:01:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"data\": [\n            {\n                \"id\": 1,\n                \"nama_barang\": \"Mie Goreng Indomie\",\n                \"kode_barang\": \"NTKGC\",\n                \"user_id\": 1,\n                \"createdAt\": \"2020-06-05T18:27:09.000Z\",\n                \"updatedAt\": \"2020-06-05T18:27:09.000Z\"\n            }\n        ],\n        \"pagination\": {\n            \"total_records\": 1,\n            \"total_per_page\": 25,\n            \"total_page\": 1,\n            \"current_page\": 1,\n            \"next_page\": null,\n            \"prev_page\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}:{{port}}/barang/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"barang",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}:{{port}}/barang/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"barang",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "179"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b3-+gz5ed3JM+d+sHmDp+T+NubfVFI\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jun 2020 19:10:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"nama_barang\": \"Mie Goreng Indomie Spesial\",\n        \"kode_barang\": \"IYMJS\",\n        \"createdAt\": \"2020-06-02T18:54:10.000Z\",\n        \"updatedAt\": \"2020-06-02T18:54:57.000Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Gudang",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nama_gudang\": \"Gudang Garam\",\n\t\"alamat\": \"Jl. Raya petak umpet gang buntu\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:{{port}}/gudang",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"gudang"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"nama_gudang\": \"Gudang Garam\",\n\t\"alamat\": \"Jl. Raya petak umpet gang buntu\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}:{{port}}/gudang",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"gudang"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "208"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d0-Xtqpn8gv1+FjRRY3SGjgw6ff2dA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jun 2020 19:11:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"kode_gudang\": \"QOHLK\",\n        \"id\": 1,\n        \"nama_gudang\": \"Gudang Garam\",\n        \"alamat\": \"Jl. Raya petak umpet gang buntu\",\n        \"updatedAt\": \"2020-06-02T19:11:54.973Z\",\n        \"createdAt\": \"2020-06-02T19:11:54.973Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nama_gudang\": \"Gudang Garam Semarang\",\n\t\"alamat\": \"Jl. Raya Semarang raya\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:{{port}}/gudang/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"gudang",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"nama_gudang\": \"Gudang Garam Semarang\",\n\t\"alamat\": \"Jl. Raya Semarang raya\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}:{{port}}/gudang/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"gudang",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "208"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d0-A/dNOwgfUsThBt20TPSfgRW1Pp8\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jun 2020 19:12:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"nama_gudang\": \"Gudang Garam Semarang\",\n        \"kode_gudang\": \"QOHLK\",\n        \"alamat\": \"Jl. Raya Semarang raya\",\n        \"createdAt\": \"2020-06-02T19:11:54.000Z\",\n        \"updatedAt\": \"2020-06-02T19:12:43.574Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:{{port}}/gudang/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"gudang",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get By ID Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}:{{port}}/gudang/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"gudang",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "231"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e7-WOGEZytlWuNKPH4ZljtTxpk/MA8\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jun 2020 19:13:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"nama_gudang\": \"Gudang Garam Semarang\",\n        \"kode_gudang\": \"QOHLK\",\n        \"alamat\": \"Jl. Raya Semarang raya\",\n        \"createdAt\": \"2020-06-02T19:11:54.000Z\",\n        \"updatedAt\": \"2020-06-02T19:12:43.000Z\",\n        \"inventaris_gudang\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}:{{port}}/gudang?kode_gudang=&nama_gudang=garam&alamat=&user_id=&page=1&per_page=25",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"gudang"
+							],
+							"query": [
+								{
+									"key": "kode_gudang",
+									"value": ""
+								},
+								{
+									"key": "nama_gudang",
+									"value": "garam"
+								},
+								{
+									"key": "alamat",
+									"value": ""
+								},
+								{
+									"key": "user_id",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}:{{port}}/gudang?kode_gudang=&nama_gudang=garam&alamat=&user_id=&page=1&per_page=25",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"gudang"
+									],
+									"query": [
+										{
+											"key": "kode_gudang",
+											"value": ""
+										},
+										{
+											"key": "nama_gudang",
+											"value": "garam"
+										},
+										{
+											"key": "alamat",
+											"value": ""
+										},
+										{
+											"key": "user_id",
+											"value": ""
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "25"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "350"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15e-E72k/cM0w/IB9t/3oHWnh5n4plo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 07 Jun 2020 04:00:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"data\": [\n            {\n                \"id\": 1,\n                \"nama_gudang\": \"Gudang Garam\",\n                \"kode_gudang\": \"GFFUC\",\n                \"alamat\": \"Jl. Raya petak umpet gang buntu\",\n                \"user_id\": 0,\n                \"createdAt\": \"2020-06-05T18:27:17.000Z\",\n                \"updatedAt\": \"2020-06-05T18:27:17.000Z\"\n            }\n        ],\n        \"pagination\": {\n            \"total_records\": 1,\n            \"total_per_page\": 25,\n            \"total_page\": 1,\n            \"current_page\": 1,\n            \"next_page\": null,\n            \"prev_page\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}:{{port}}/gudang/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"gudang",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}:{{port}}/gudang/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"gudang",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "208"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d0-4TMBMyi1M6pTMvbJWNOFcOfmKGE\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jun 2020 19:15:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"nama_gudang\": \"Gudang Garam Semarang\",\n        \"kode_gudang\": \"QOHLK\",\n        \"alamat\": \"Jl. Raya Semarang raya\",\n        \"createdAt\": \"2020-06-02T19:11:54.000Z\",\n        \"updatedAt\": \"2020-06-02T19:12:43.000Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6509ad75-a2d5-4782-84eb-790f0dca547e",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "93d714f0-ba20-41a0-97e9-b654939b7dd6",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nama\": \"Toriq Ahmad Salam\",\n\t\"username\": \"toriqahmads22\",\n\t\"password\": \"Kbps1234\",\n\t\"role\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:{{port}}/user",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"user"
+							]
+						},
+						"description": "role can filled with 1 or -1. Default value is 1.\n1 = basic user\n-1 = admin user"
+					},
+					"response": [
+						{
+							"name": "Create Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"nama\": \"Toriq Ahmad Salam\",\n\t\"username\": \"toriqahmads22\",\n\t\"password\": \"Kbps1234\",\n\t\"role\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}:{{port}}/user",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "251"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fb-b9aomghKdfLRQzegMwyia5lcYik\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 07 Jun 2020 04:03:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 2,\n        \"nama\": \"Toriq Ahmad Salam\",\n        \"username\": \"toriqahmads22\",\n        \"password\": \"$2a$10$6Xpi1lCvLtYvTRLZLPfGB.OM7WngM0p8LN56/MIbgWp9o1Gy4.XNW\",\n        \"role\": 1,\n        \"updatedAt\": \"2020-06-07T04:03:04.033Z\",\n        \"createdAt\": \"2020-06-07T04:03:04.033Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nama\": \"Toriq Ahmad\",\n\t\"password\": \"Kbps123\",\n\t\"role\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:{{port}}/user/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"user",
+								"1"
+							]
+						},
+						"description": "role can filled with 1 or -1. Default value is 1.\n1 = basic user\n-1 = admin user"
+					},
+					"response": [
+						{
+							"name": "Update Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"nama\": \"Toriq Ahmad\",\n\t\"password\": \"Kbps123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}:{{port}}/user/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "167"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a7-QKjkL7bSErYbSK+KnA0kRMQmgb4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jun 2020 19:25:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"nama\": \"Toriq Ahmad\",\n        \"username\": \"toriqahmads\",\n        \"password\": \"Kbps123\",\n        \"createdAt\": \"2020-06-02\",\n        \"updatedAt\": \"2020-06-02T19:25:04.303Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:{{port}}/user/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get By ID Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"type": "text",
+										"value": "{{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}:{{port}}/user/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"92-hw745MiraQ3MOTEfIJEM7ZGoz70\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jun 2020 19:28:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"nama\": \"Toriq Ahmad\",\n        \"username\": \"toriqahmads\",\n        \"createdAt\": \"2020-06-02\",\n        \"updatedAt\": \"2020-06-02T19:25:04.000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}:{{port}}/user?username=&nama=toriq&page=1&per_page=25",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": ""
+								},
+								{
+									"key": "nama",
+									"value": "toriq"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}:{{port}}/user?username=&nama=toriq",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"user"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": ""
+										},
+										{
+											"key": "nama",
+											"value": "toriq"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "402"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"192-AyLd/QPdnnIEdU9sBB+zrS8pt84\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jun 2020 19:28:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"data\": [\n            {\n                \"id\": 1,\n                \"nama\": \"Toriq Ahmad\",\n                \"username\": \"toriqahmads\",\n                \"createdAt\": \"2020-06-02\",\n                \"updatedAt\": \"2020-06-02T19:25:04.000Z\"\n            },\n            {\n                \"id\": 7,\n                \"nama\": \"Toriq Ahmad Salam\",\n                \"username\": \"toriqahmads2\",\n                \"createdAt\": \"2020-06-02\",\n                \"updatedAt\": \"2020-06-02T19:23:26.000Z\"\n            }\n        ],\n        \"pagination\": {\n            \"total_records\": 2,\n            \"total_per_page\": 50,\n            \"total_page\": 1,\n            \"current_page\": 1,\n            \"next_page\": null,\n            \"prev_page\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}:{{port}}/user/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}:{{port}}/user/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"92-hw745MiraQ3MOTEfIJEM7ZGoz70\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jun 2020 19:29:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"nama\": \"Toriq Ahmad\",\n        \"username\": \"toriqahmads\",\n        \"createdAt\": \"2020-06-02\",\n        \"updatedAt\": \"2020-06-02T19:25:04.000Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a8ee8683-3e0c-482e-bf65-f160dedfded8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "4ee1e41c-eb0a-4312-8a07-068da5796928",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Inventaris",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"barang_id\": 1,\n\t\"gudang_id\": 1,\n\t\"stok\": 20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:{{port}}/inventaris",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"inventaris"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"barang_id\": 2,\n\t\"gudang_id\": 2,\n\t\"stok\": 20\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}:{{port}}/inventaris",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"inventaris"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "145"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"91-Qn4FFFfr+nY3Xt90KLCV1v7Qa50\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jun 2020 19:31:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"barang_id\": 2,\n        \"gudang_id\": 2,\n        \"stok\": 20,\n        \"updatedAt\": \"2020-06-02T19:31:19.556Z\",\n        \"createdAt\": \"2020-06-02T19:31:19.556Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}:{{port}}/inventaris/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"inventaris",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get by ID Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}:{{port}}/inventaris/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"inventaris",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "488"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e8-fgsqXFfMPjqqtUjbfJ77SQp3vxw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jun 2020 19:34:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"barang_id\": 2,\n        \"gudang_id\": 2,\n        \"stok\": 20,\n        \"createdAt\": \"2020-06-02T19:31:19.000Z\",\n        \"updatedAt\": \"2020-06-02T19:31:19.000Z\",\n        \"Barang\": {\n            \"id\": 2,\n            \"nama_barang\": \"Mie Goreng Indomie\",\n            \"kode_barang\": \"ZGUQZ\",\n            \"createdAt\": \"2020-06-02T19:31:07.000Z\",\n            \"updatedAt\": \"2020-06-02T19:31:07.000Z\"\n        },\n        \"Gudang\": {\n            \"id\": 2,\n            \"nama_gudang\": \"Gudang Garam\",\n            \"kode_gudang\": \"MUJMT\",\n            \"alamat\": \"Jl. Raya petak umpet gang buntu\",\n            \"createdAt\": \"2020-06-02T19:31:12.000Z\",\n            \"updatedAt\": \"2020-06-02T19:31:12.000Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}:{{port}}/inventaris?gudang_id=1&barang_id=1&user_id=&page=1&per_page=25",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"inventaris"
+							],
+							"query": [
+								{
+									"key": "gudang_id",
+									"value": "1"
+								},
+								{
+									"key": "barang_id",
+									"value": "1"
+								},
+								{
+									"key": "user_id",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}:{{port}}/inventaris?gudang_id=1&barang_id=1&user_id=&page=1&per_page=25",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"inventaris"
+									],
+									"query": [
+										{
+											"key": "gudang_id",
+											"value": "1"
+										},
+										{
+											"key": "barang_id",
+											"value": "1"
+										},
+										{
+											"key": "user_id",
+											"value": ""
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "25"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "653"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28d-tNFz6k5j2TW4Hl4ovZmU63g8qhw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 07 Jun 2020 04:04:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"data\": [\n            {\n                \"barang_id\": 1,\n                \"gudang_id\": 1,\n                \"stok\": 0,\n                \"user_id\": 1,\n                \"createdAt\": \"2020-06-05T18:32:28.000Z\",\n                \"updatedAt\": \"2020-06-06T03:48:08.000Z\",\n                \"Gudang\": {\n                    \"id\": 1,\n                    \"nama_gudang\": \"Gudang Garam\",\n                    \"kode_gudang\": \"GFFUC\",\n                    \"alamat\": \"Jl. Raya petak umpet gang buntu\",\n                    \"user_id\": 0,\n                    \"createdAt\": \"2020-06-05T18:27:17.000Z\",\n                    \"updatedAt\": \"2020-06-05T18:27:17.000Z\"\n                },\n                \"Barang\": {\n                    \"id\": 1,\n                    \"nama_barang\": \"Mie Goreng Indomie\",\n                    \"kode_barang\": \"NTKGC\",\n                    \"user_id\": 1,\n                    \"createdAt\": \"2020-06-05T18:27:09.000Z\",\n                    \"updatedAt\": \"2020-06-05T18:27:09.000Z\"\n                }\n            }\n        ],\n        \"pagination\": {\n            \"total_records\": 1,\n            \"total_per_page\": 25,\n            \"total_page\": 1,\n            \"current_page\": 1,\n            \"next_page\": null,\n            \"prev_page\": null\n        }\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Log",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"barang_id\": 1,\n\t\"gudang_id\": 1,\n\t\"user_id\": 1,\n\t\"jumlah\": 10,\n\t\"jenis\": \"keluar\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:{{port}}/log",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"log"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"barang_id\": 2,\n\t\"gudang_id\": 2,\n\t\"user_id\": 7,\n\t\"jumlah\": 10,\n\t\"jenis\": \"keluar\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}:{{port}}/log",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"log"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "183"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b7-WcUv4DxaV/FnMUismzGbujSaCp8\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jun 2020 19:40:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"barang_id\": 2,\n        \"gudang_id\": 2,\n        \"jumlah\": 10,\n        \"jenis\": \"keluar\",\n        \"user_id\": 7,\n        \"updatedAt\": \"2020-06-02T19:40:34.463Z\",\n        \"createdAt\": \"2020-06-02T19:40:34.463Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}:{{port}}/log/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"log",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get by ID Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}:{{port}}/log/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"log",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "659"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"293-2MPs2JlRw2QYkLC1ZZnGwdw0AXI\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Jun 2020 19:41:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"barang_id\": 2,\n        \"gudang_id\": 2,\n        \"jumlah\": 10,\n        \"user_id\": 7,\n        \"jenis\": \"keluar\",\n        \"createdAt\": \"2020-06-02T19:40:34.000Z\",\n        \"updatedAt\": \"2020-06-02T19:40:34.000Z\",\n        \"Barang\": {\n            \"id\": 2,\n            \"nama_barang\": \"Mie Goreng Indomie\",\n            \"kode_barang\": \"ZGUQZ\",\n            \"createdAt\": \"2020-06-02T19:31:07.000Z\",\n            \"updatedAt\": \"2020-06-02T19:31:07.000Z\"\n        },\n        \"Gudang\": {\n            \"id\": 2,\n            \"nama_gudang\": \"Gudang Garam\",\n            \"kode_gudang\": \"MUJMT\",\n            \"alamat\": \"Jl. Raya petak umpet gang buntu\",\n            \"createdAt\": \"2020-06-02T19:31:12.000Z\",\n            \"updatedAt\": \"2020-06-02T19:31:12.000Z\"\n        },\n        \"User\": {\n            \"id\": 7,\n            \"nama\": \"Toriq Ahmad Salam\",\n            \"username\": \"toriqahmads2\",\n            \"createdAt\": \"2020-06-02\",\n            \"updatedAt\": \"2020-06-02T19:23:26.000Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}:{{port}}/log?gudang_id=&barang_id=&user_id=&jenis=keluar&user_id=&page=1&per_page=25",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"log"
+							],
+							"query": [
+								{
+									"key": "gudang_id",
+									"value": ""
+								},
+								{
+									"key": "barang_id",
+									"value": ""
+								},
+								{
+									"key": "user_id",
+									"value": ""
+								},
+								{
+									"key": "jenis",
+									"value": "keluar"
+								},
+								{
+									"key": "user_id",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}:{{port}}/log?gudang_id=&barang_id=&user_id=&jenis=keluar&user_id=&page=1&per_page=25",
+									"host": [
+										"{{base_url}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"log"
+									],
+									"query": [
+										{
+											"key": "gudang_id",
+											"value": ""
+										},
+										{
+											"key": "barang_id",
+											"value": ""
+										},
+										{
+											"key": "user_id",
+											"value": ""
+										},
+										{
+											"key": "jenis",
+											"value": "keluar"
+										},
+										{
+											"key": "user_id",
+											"value": ""
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "25"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1473"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c1-XmRzenAlgcTIjoex+OjvzfrAoZM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 07 Jun 2020 04:03:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"data\": [\n            {\n                \"id\": 1,\n                \"barang_id\": 1,\n                \"gudang_id\": 1,\n                \"jumlah\": 10,\n                \"user_id\": 1,\n                \"jenis\": \"keluar\",\n                \"createdAt\": \"2020-06-05T18:33:16.000Z\",\n                \"updatedAt\": \"2020-06-05T18:33:16.000Z\",\n                \"Gudang\": {\n                    \"id\": 1,\n                    \"nama_gudang\": \"Gudang Garam\",\n                    \"kode_gudang\": \"GFFUC\",\n                    \"alamat\": \"Jl. Raya petak umpet gang buntu\",\n                    \"user_id\": 0,\n                    \"createdAt\": \"2020-06-05T18:27:17.000Z\",\n                    \"updatedAt\": \"2020-06-05T18:27:17.000Z\"\n                },\n                \"Barang\": {\n                    \"id\": 1,\n                    \"nama_barang\": \"Mie Goreng Indomie\",\n                    \"kode_barang\": \"NTKGC\",\n                    \"user_id\": 1,\n                    \"createdAt\": \"2020-06-05T18:27:09.000Z\",\n                    \"updatedAt\": \"2020-06-05T18:27:09.000Z\"\n                },\n                \"User\": {\n                    \"id\": 1,\n                    \"nama\": \"Toriq Ahmad\",\n                    \"username\": \"toriqahmads\",\n                    \"role\": 1,\n                    \"createdAt\": \"2020-06-05\",\n                    \"updatedAt\": \"2020-06-05T18:16:42.000Z\"\n                }\n            },\n            {\n                \"id\": 2,\n                \"barang_id\": 1,\n                \"gudang_id\": 1,\n                \"jumlah\": 10,\n                \"user_id\": 1,\n                \"jenis\": \"keluar\",\n                \"createdAt\": \"2020-06-06T03:48:09.000Z\",\n                \"updatedAt\": \"2020-06-06T03:48:09.000Z\",\n                \"Gudang\": {\n                    \"id\": 1,\n                    \"nama_gudang\": \"Gudang Garam\",\n                    \"kode_gudang\": \"GFFUC\",\n                    \"alamat\": \"Jl. Raya petak umpet gang buntu\",\n                    \"user_id\": 0,\n                    \"createdAt\": \"2020-06-05T18:27:17.000Z\",\n                    \"updatedAt\": \"2020-06-05T18:27:17.000Z\"\n                },\n                \"Barang\": {\n                    \"id\": 1,\n                    \"nama_barang\": \"Mie Goreng Indomie\",\n                    \"kode_barang\": \"NTKGC\",\n                    \"user_id\": 1,\n                    \"createdAt\": \"2020-06-05T18:27:09.000Z\",\n                    \"updatedAt\": \"2020-06-05T18:27:09.000Z\"\n                },\n                \"User\": {\n                    \"id\": 1,\n                    \"nama\": \"Toriq Ahmad\",\n                    \"username\": \"toriqahmads\",\n                    \"role\": 1,\n                    \"createdAt\": \"2020-06-05\",\n                    \"updatedAt\": \"2020-06-05T18:16:42.000Z\"\n                }\n            }\n        ],\n        \"pagination\": {\n            \"total_records\": 2,\n            \"total_per_page\": 25,\n            \"total_page\": 1,\n            \"current_page\": 1,\n            \"next_page\": null,\n            \"prev_page\": null\n        }\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ff50c5d3-a486-4153-8f80-cc4f2cb4c9fe",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "855ba94f-ea2c-4fef-a70e-be42ae78f576",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "8341b26d-2acf-40ec-a2e1-b00700c0c00b",
+			"key": "base_url",
+			"value": "http://lab.osyduck.me",
+			"type": "string"
+		},
+		{
+			"id": "46ebf324-ec85-45ce-a506-2f79e83580d2",
+			"key": "port",
+			"value": "1400",
+			"type": "string"
+		},
+		{
+			"id": "cce017c6-fc1b-4e7d-b70d-25436cfabf6c",
+			"key": "token",
+			"value": "Bearer NDM4NjEzMDkzYjgwMTdkMmI5ZTUzZjA1OGJlMDMyMjM1ODg2Y2I2MDU0NzE3ZGI1MDhlM2Y4NTRhMzNmYjA3ZGQyZTNiOWYwNzlmMGQ3MmEzNzhkZDdiMGUzZTgyYzIzMzg4OTE5YjM3OGE1N2QzNjkwNTAyMTA0NGNjM2NhNWZmZGQ1NTg2ZjdhZmI2MzNjOGI5MGQ0ZjdiNTFjYTc1YWI2NTY4YzJlOTJjZGFhYjMyNDg5ZTZhMTNhZjRhMTJlYmYyOTA5NmU5MjUxYjFiOTBmM2Y2OGM4MjA3N2Q3NTllOTA3MTU0NTVlZDkzNDBmNWNlM2Y2MDg0ZmZkZjcwZmM4NjVkYjA3ZDVkMDE4NTdiNmRlNGVlMjhmYzdhOTE0ZTdiMDEzYWYxMDNhMWVkZmZiNDAyNGQ1Y2JkMjE0ZjNmYzgxMWI0OTk1MzY5MWI0ZTg1MDIyMjlmOWJlMjIxOWQwNTkzNDdlMjFkNmI1ZmY4YWUyNzQ2MmNkMjRlOWE0MDcwNzE1YWZiOGFjMGY5MTZhODY3M2Q1YTUyNmQwMGRkNWY1YjNmNGY5Y2E0YmU5ZTk3ZmE3ZDIyZjMxMDZiMQ==",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
