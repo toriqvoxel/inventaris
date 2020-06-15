@@ -3,6 +3,10 @@
 ### Documentation  :pushpin:
 - Documentation :point_right:  **[here!](https://documenter.getpostman.com/view/8708119/SztG3m61?version=latest "here!")**
 
+### For frontend checkout here
+
+- Frontend :point_right:  **[here!](https://github.com/toriqvoxel/inventaris-fe "here!")**
+
 ### Installation
 
 Invetaris requires [Node.js](https://nodejs.org/) v10 to run.

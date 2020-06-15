@@ -1,0 +1,26 @@
+# Inventaris Bakcend
+
+######## Untuk frontend checkout this repo #########
+- Frontend :point_right:  https://github.com/toriqvoxel/inventaris-fe.git
+
+
+######## Installasi ##########
+
+Untuk panduan installasi dari git, silahkan cek README.md
+
+1. Untuk menjalankan Inventaris Frontend perlu Node.js v10. And bisa mendownloadnya di sini https://nodejs.org/
+
+2. Masuk ke terminal dan arahkan ke folder aplikasi berada.
+3. Ketikkan perintah berikut untuk melakukan installasi
+
+npm install
+npm install sequlize sequelize-cli -g
+sequelize db:create
+sequelize db:migrate
+
+4. Buat file yang bernama .env yang isinya dari salinan file .evn.example 
+5. Anda bisa mengubah PORT, JWT_SECRET, dan CIPHER_KEY sesuai dengan keinginan Anda.
+6. Simpan
+8. Untuk menjalankan aplikasi, ketikkan perintah berikut pada terminal
+
+npm run start
