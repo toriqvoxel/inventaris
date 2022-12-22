@@ -21,7 +21,7 @@
     "flaverr": "^1.10.0",
     "helmet": "^3.22.0",
     "http-errors": "^1.7.3",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "lodash": "^4.17.15",
     "morgan": "^1.10.0",
     "mysql2": "^2.1.0",
